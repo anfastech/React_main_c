@@ -14,7 +14,7 @@ h1 {
   scroll-behavior: smooth;
 
   /* background: linear-gradient(90deg, #ff9ff2, #4f0081 95%); */
-  background:linear-gradient(90deg,  #e2b4ff ,  #8728c2 95%);
+  background:linear-gradient(90deg,  #e2b4ff ,  #4f0081 95%);
   padding: 20px 40px;
 }
 body {
