@@ -1,504 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initail-scale=1.0" />
+    <title>Mini Project</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+      body {
+  color: black;
+  font-family: "raleway";
+}
+div {
+  letter-spacing: 1px ;
+  word-spacing: 2px;
+}
+.gap {
+  min-height: 50px;
+}
+.code-header{
+  text-align:right;
+  /* background:#f8f8f8; */
+  background:none;
+  /* border:1px solid #e5e5e5; */
+  /* border:1px solid #14006b; */
+  box-sizing:border-box
+}
+.code-header a{
+  font-size:15px;
+  display:inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor:pointer;
+  /* border-left:1px solid #e5e5e5; */
+  box-sizing:border-box;
+  padding:6px 13px;
+  background: #2200cc;
+  border: 3px solid white;
+  outline: 1.5px dashed black;
+  color: white;
+  margin: 15px 0 ;
 
-<head>
+}
+.code-header a:hover{
+  /* background:#f3f3f3;
+   */
+  transition:all 0.1s linear
+}
+.msg-alert{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#333;
+  z-index:1000;
+  color:#fff;
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:15px;
+  padding:8px 12px;
+  border-radius:4px
+}
+code[class*="language-"],
+pre[class*="language-"]{
+  font-size:14px;
+  letter-spacing:.02rem;
+  line-height:1.4;
+  color: #ffffffce;
+  /* color:black; */
+  background:none;
+  /* text-shadow:0 1px white; */
+  /* font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace; */
+  text-align:left;
+  white-space:pre;
+  word-spacing:normal;
+  word-break:normal;
+  word-wrap:normal;
+  -moz-tab-size:4;
+  -o-tab-size:4;
+  tab-size:4;
+  -webkit-hyphens:none;
+  -moz-hyphens:none;
+  -ms-hyphens:none;
+  hyphens:none
+}
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"]::-moz-selection{
+  text-shadow:none;
+  background:#b3d4fc}
+pre[class*="language-"]::selection,
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection,
+code[class*="language-"]::selection{
+  text-shadow:none;
+  background:#b3d4fc
+}
+@media print{code[class*="language-"],pre[class*="language-"]{
+  text-shadow:none
+  }
+}
+pre[class*="language-"]{
+  padding:1em;
+  margin:0;
+  overflow:auto;
+  border-left:5px solid #ffffff34;
+  border-radius: 15px;
+  border-top:0;
+  box-sizing:border-box
+}
+:not(pre)>code[class*="language-"],
+pre[class*="language-"]{
+  background:#08002b ;
+  /* background:#f8f8f8 */
+}
+:not(pre)>code[class*="language-"]{
+  padding:.1em;
+  border-radius:.3em;
+  white-space:normal
+}
+.token.comment,.token.prolog,
+.token.doctype,.token.cdata{
+  color:slategray
+}
+.token.punctuation{
+  color:#999
+}
+.namespace{
+  opacity:.7
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted{
+  color:rgb(224, 0, 123)
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted{
+  color:rgb(148, 223, 0)
+}
+.token.tag {
+  color : #247cff;
+}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title> html updated </title>
-
-    <meta charset="UTF-8">
-
-</head>
-<body>
-
-
-    
-    <a href="#up"><div class="bu-up"><i>UP</i></div></a>
-<div class="container">
-    <br>
-<br>
-
-
-<h1>Plus two Computer Pratical Programmes Syntax </h1>
- <p>
-    Easy and short syntax. which is easy to learn plus two final year practical. you can copy code
-    or learn by changing. this are most confidential programs from options practice by writing, or coding in application on yourown mobile or pc. <br>
-    <br>
-    <b >General -  </b> it is common for every c++ program a similar Base programme. therefore think connectively and study the basic of html tag also such as container tags basic heading tags img tag and attributes table and the List tags 
- </p>
- <p  id="up">
-   
-    <h3> here select Part html or cpp</h3>
- </p>
- <h2  class="toleft">Programmes lists</h2>
-<div class="btn-html">
-   <a href="#html"> <button>HTML</button></a>
-   <a href="#c++"> <button>C <i>++</i></button></a>
-</div>
- <div>
-       
-    <ul>
-        <li>Design a simple and Attractive web page for kerala tourism , it should contain (background color or image , headings , text formating and font tags , images etc.. )  </li>
-    
-    </ul>
-    </p>
-    
-    
-    <div class="box">
-        <div class="clearfix">
-            <div class="pleft">
-                <h2 id="html">Basic html.</h2>
-            </div>
-            <div class="clip main">
-                <button type="button btn-copy" id="copy-button" data-clipboard-target="#html-base" class="btn btn-primary">
-                    &nbsp;&nbsp;Copy code</button>
-            </div>
-        </div>
-        
-    
-        <pre id="html-base" class="html-code code">
-<span class="l"> </span> 
-<span class="l"> </span> &#60;html&#62;
-<span class="l"> </span>   &lt;head&gt;
-<span class="l"> </span>      &lt;title&gt;Table&lt;&#47;title&gt;
-<span class="l"> </span>    &lt;&#47;head&gt;
-<span class="l"> </span>
-<span class="l"> </span>   &#60;body bgcolor="<i>color</i>"&#62; 
-<span class="l"> </span>
-<span class="l"> </span>
-<span class="l"> </span>
-<span class="l"> </span>
-<span class="l">  </span>   &lt;&#47;body&gt; 
-<span class="l">  </span>&lt;&#47;html&gt; 
-<span class="l"> </span>
-      </pre>
-    
-        <p>
-            It is the base of html code learn the different attributes of tag give preiority to the following tas Img tag , table tag , list tags , atttributes of body tag etc.<br>
-            <br>
-            below some of selected questions syntax.
-        </p>
-    
-    
-    
-    
-    </div>
-    
-   <br><br>
-    
-    <h2 class="panel-title">
-        <f>1</f> Web page about kerala tourism</li>
-    </h2>
-    <br>
-    <pre class="html-code code">
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;<span>Kerala Tourism</span>&lt;&#47;title&gt;
-&lt;&#47;head&gt;
-&lt;body <i>bgcolor="#ddd"</i>&gt;
-<span>&lt;center&gt;</span>
-<i>&lt;i&gt;</i> &lt;h1&gt;<span>Kerala Tourism</span>&lt;&#47;h1&gt;
-&lt;h3&gt;<span>Welcome to God's own country</span>&lt;&#47;h3&gt; <i>&lt;&#47;i&gt;</i>
-
-<i>&lt;u&gt;</i> &lt;h2&gt;<span>TouristDestinations</span>&lt;&#47;h2&gt; <i>&lt;&#47;u&gt;</i>
-&lt;font face="Arial" color="Red" size="5"&gt;
-Munnar&lt;br &#47;&gt;
-Alappuzha&lt;br &#47;&gt;
-Wayanad&lt;br &#47;&gt;
-Kochi&lt;br &#47;&gt;
-Thekkadi &lt;&#47;font
-&gt;&lt;br &#47;&gt;&lt;br &#47;&gt;
-&lt;img src="boatrace.jpg" width="300" height="150" &#47;&gt; &nbsp;&nbsp;
-&lt;img src="kathakali.jpg" width="300" height="150" &#47;&gt; &nbsp;&nbsp;
-&lt;img src="houseboat.jpg" width="300" height="150" &#47;&gt; &nbsp;&nbsp;
-&lt;img src="wildlife.jpg" width="300" height="150" &#47;&gt;
-&lt;&#47;center&gt;
-&lt;&#47;body&gt;
-&lt;&#47;html&gt;
-        </pre>
-    <br>
-    <br>
-    <div class="out">
-        <div class="output"  id="html-1">
- 
-                <div style="background-image:#ddd">
-                <center>
-                <i
-                ><h1>Kerala Tourism</h1>
-                <h3>Welcome to God's own country</h3></i
-                >
-                <u><h2>TouristDestinations</h2></u>
-                <font face="Arial" color="Red" size="5">
-                Munnar<br />
-                Alappuzha<br />
-                Wayanad<br />
-                Kochi<br />
-                Thekkadi </font
-                ><br /><br />
-                <img src="https://imagevars.gulfnews.com/2021/08/21/Onam-boat-races-for-web_17b66fb485f_medium.jpg" width="300" height="150" />   
-                <img src="https://www.thestatesman.com/wp-content/uploads/2022/01/Kathakali-1.jpg" width="300" height="150" />   
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUjYhMBKtGqy2mPs0VWjHmJCT5MFSKF3z5ZQ&usqp=CAU" width="300" height="150" />   
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtRsJsmMPyj69ic5-MU83t21LuXQmACkgn1Q&usqp=CAU" width="300" height="150" />
-                </center>
-            </div>
-
-
-        </div>
-    </div>
-    <br><br><br>
-    <h2 class="panel-title">
-        <f>2</f> Web page containing table shown below.</li>
-    </h2>
-    <br>
-    <div class="out">
-        <div class="output"  id="html-1">
- 
-         <div style="background:#b29db5" >
-            <TABLE Border=2 Align= center> 
-                <CAPTION><B>Terrestrial Planet</B> 
-                (Source: NASA)</CAPTION> 
-                <TR> 
-                <TH>Planet</TH> 
-                <TH>Day Length <BR> 
-                (In Earth hours)</TH> 
-                <TH>Year Length <BR> 
-                (In Earth days)</TH> 
-                </TR> 
-                <TR> 
-                <TD>Mercury</TD> 
-                <TD>1408</TD> 
-                <TD>88</TD> 
-                </TR> 
-                <TR> 
-                <TD>Venus</TD> 
-                <TD>5832</TD> 
-                <TD>224.7</TD> 
-                </TR> 
-                <TR> 
-                <TD>Earth</TD> 
-                <TD>24</TD> 
-                <TD>365.26</TD> 
-                </TR> 
-                <TR> 
-                <TD>Mars</TD> 
-                <TD>25</TD> 
-                <TD>687</TD> 
-                </TR> 
-                </TABLE>
-
-         </div>
-
-
-        </div>
-    </div>
-
-    <br>
-    <br>
-    <pre class="html-code code">
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Table&lt;&#47;title&gt;
-&lt;&#47;head&gt;
-&lt;body bgcolor="#ddd" &gt;
-    &lt;table border="2" align="center"&gt;
-    &lt;caption&gt;
-        &lt;b&gt;Terrestrial Planet&lt;&#47;b&gt;
-        (Source: NASA)
-    &lt;&#47;caption&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Planet&lt;&#47;th&gt;
-        &lt;th&gt;
-        Day Length &lt;br &#47;&gt;
-        (In Earth hours)
-        &lt;&#47;th&gt;
-        &lt;th&gt;
-        Year Length &lt;br &#47;&gt;
-        (In Earth days)
-        &lt;&#47;th&gt;
-    &lt;&#47;tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Mercury&lt;&#47;td&gt;
-        &lt;td&gt;1408&lt;&#47;td&gt;
-        &lt;td&gt;88&lt;&#47;td&gt;
-    &lt;&#47;tr&gt;
-<i>     &lt;tr&gt;
-         &lt;td&gt;Venus&lt;&#47;td&gt;
-         &lt;td&gt;5832&lt;&#47;td&gt;
-         &lt;td&gt;224.7&lt;&#47;td&gt;
-    &lt;&#47;tr&gt;
-    &lt;tr&gt;
-       &lt;td&gt;Earth&lt;&#47;td&gt;
-        &lt;td&gt;24&lt;&#47;td&gt;
-        &lt;td&gt;365.26&lt;&#47;td&gt;
-    &lt;&#47;tr&gt;
-</i>
-    &lt;tr&gt;
-        &lt;td&gt;Mars&lt;&#47;td&gt;
-        &lt;td&gt;25&lt;&#47;td&gt;
-        &lt;td&gt;687&lt;&#47;td&gt;
-    &lt;&#47;tr&gt;
-    &lt;&#47;table&gt;
-&lt;&#47;body&gt;
-&lt;&#47;html&gt;
-    </pre>
-
-    <br><br>
-    </div>
-<div>
-       
-<h1>* CPP Programmes.</h1>
-
-<ul id="c++">
-    <li><b>Sum</b> of the digits of a <b>Integer</b></li>
-    <li><b>Factorial</b> of a given number</li>
-    <li><b>Largest</b> Integer among three values </li>
-    <li><b>Squares</b> or <b>sum</b> of <b>first</b> n Integer numbers </li>
-    <li><b>Input</b> a day number <b>& </b>display the <b>Day</b></li>
-
-</ul>
-</p>
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string{
+  color:#f1c083
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword{
+  color:rgb(0, 165, 236)
+}
+.token.attr-value,.token.url {
+  color: rgb(238, 214, 0);
+}
+.token.function,
+.token.class-name{
+  color:#DD4A68
+}
+.token.regex,
+.token.important,
+.token.variable{
+  color:#e90
+}
+.token.important,
+.token.bold{
+  font-weight:bold
+}
+.token.italic{
+  font-style:italic
+}
+.token.entity{
+  cursor:help
+}
+.container{
+  width:95%;
+  margin:0 auto;
+  overflow : hidden;
+}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+  </head>
 
 
-<div class="box">
-    <div class="clearfix">
-        <div class="pleft">
-            <h2>Base syntax</h2>
-        </div>
-        <div class="clip main">
-            <button type="button btn-copy" id="copy-button" data-clipboard-target="#n0" class="btn btn-primary">
-                <svg class='fontawesomesvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path fill="white"
-                        d="M101.5 64C114.6 26.7 150.2 0 192 0s77.4 26.7 90.5 64H320c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h37.5zM224 96c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM160 368c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zM96 392c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24zm64-120c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zM96 296c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24z" />
-                </svg>
-                &nbsp;&nbsp;Copy code</button>
-        </div>
-    </div>
-
-    <pre name="n0" id="n0" class="code">
-
-    <span class="l selector">#include </span><span class="property"> &#60;iostream&#62;</span>
-    using namespace <span class="l value">std </span>;
-    <span class="l property">int</span> <span class="value">main&#40;&#41;</span>   {
-         <span class="l"> </span>
-
-                   <span class="l"> </span>
-                   <span class="l"> </span>
-                   <span class="l"> </span>
-                  <span class="l"> </span>
-                  <span class="l"> </span>
-       <span class="l property">return </span><span class="value">0</span> ;
-                <span class="l"> </span>
-     <span class="l">}</span>
-
-  </pre>
-
-    <p>
-        It is essential know main syntax. below will be syntax of questions only. <br>
-        <br>
-        below we have a programme which done
-    </p>
-
-
-
-
-</div>
-
-<div class="box">
-    <div class="clearfix">
-        <div class="pleft">
-            <h2 class="panel-title">
-                <f>1</f> Sum of the digits of a integer
-            </h2>
-            <br>
-            <br>
-        </div>
-
-        <div class="clip sub">
-            <button type="button btn-copy" id="copy-button" data-clipboard-target="#n1" class="btn btn-primary">
-                <svg class='fontawesomesvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path fill="white"
-                        d="M101.5 64C114.6 26.7 150.2 0 192 0s77.4 26.7 90.5 64H320c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h37.5zM224 96c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM160 368c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zM96 392c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24zm64-120c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zM96 296c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24z" />
-                </svg>
-                &nbsp;&nbsp;Copy code</button>
-        </div>
-
-    </div>
-
-    <pre class="code">
-
-    <span class="l selector">#include </span><span class="property"> &#60;iostream&#62;</span>
-    using namespace <span class="l value">std </span>;
-    <span class="l property">int</span><span class="value"> main&#40;&#41;</span> { <div id="n1" class="syn">
-       <span class="l selector">int </span>n<span class=" property">,</span>r<span class=" property">,</span>s<span class=" property">=</span><span class="value">0</span> ;
-       <span class="value">cout</span> << <span class="l selector">" input number "</span> ;
-       <span class="l value">cin </span> >> <span class="property">n</span> ;
-       <span class="l selector">while</span>(<span class=""> <span class="property">n </span>> <span class="selector">0</span></span>)  {
-         <span class="l"> r </span><span class="property">= </span>n<span class="value">%</span><span class="selector">10</span> ;   
-         <span class="l"> s </span><span class="property">= </span>s<span class="value">+</span><span class="selector">r</span> ;   
-         <span class="l"> n </span><span class="property">= </span>n<span class="value">/</span><span class="selector">10</span> ;   
-        <span class="l"> } </span> 
-        <span class="value">cout</span> << <span class="l selector">" sum is "</span> << <span class="value"> s</span> ; </div>
-        <span class="l"> </span>
-       <span class="l property">return </span><span class="value">0</span> ;
-                <span class="l"> </span>
-     <span class="l">}</span>
-
-  </pre>
-
-</div>
-
-
-<br>
-<br>
-
-<h2 class="panel-title">
-    <f>2</f> <b>Factorial</b> of a given number</li>
-</h2>
-<br>
-
-<pre class="code">
-  <span class="l comments">  //Factorial of a given number </span>
-  <div id="n2" class="property"><span class="l"> int n , i;</span>
-    <span class="1"> float f=1; </span>
-<span class="l"> </span> cout << " Enter the number ";
-<span class="l" > cin >> n</span>;
-<span class="l"> </span> for(i=1 ; i<= n ; i++ ) {
- <span class="l"> </span>  f=f*i;
-<span class="l"> </span> }
-<span class="l"> </span> cout << " factorial of given number = " << f ;
-<span class="l"> </span> 
-<span class="l"> </span> 
-  </div>
-</pre>
-<br>
-<br>
-<h2 class="panel-title">
-    <f>3</f> <b>Largest</b> Integer among three values </li>
-</h2>
-<br>
-<pre class="code property">
-  <span class="l comments">  //largest integer </span> 
-<span class="l"> </span> 
-<span class="l"> </span> int n1,n2,n3 ;
-<span class="l"> </span> cout << " enter three numbers " ;
-<span class="l"> </span> cin >> n1 >> n2 >> n3 ;
-<span class="l"> </span> 
-<span class="l"> </span> if ( n1 > n2 && n1 > n3 )
-<span class="l"> </span>  cout << " largest is " << n1;
-<span class="l"> </span> else if ( n2 > n3 && n2 > n3 )
-<span class="l"> </span>  cout << " largest is " << n2;
-<span class="l"> </span> else 
-<span class="l"> </span>  cout << " largest is " << n3;
-<span class="l"> </span>
-</pre>
-<br>
-<br>
-<h2 class="panel-title">
-    <f>4</f> <b>Squares</b> or <b>sum</b> of <b>first</b> n Integer numbers
-</h2>
-<br>
-<pre class="code property">
-<span class="l comments">  //squares or sum of first n integer numbers </span> 
-<span class="l"> </span> 
-<span class="l"> </span> int n, i, sum=0 ;
-<span class="l"> </span> cout << " enter value for n " ;
-<span class="l"> </span> cin >> n;
-<span class="l"> </span> 
-<span class="l"> </span> for ( i=1 ; i<=n ; i++ )
-<span class="l"> </span> sum=sum+i*i;
-<span class="l"> </span> 
-<span class="l"> </span> 
-<span class="l"> </span> cout << " sum of first "<< n << " numbers :  " << sum ;
-<span class="l"> </span> 
+  <body>
+    <style>
+      #back {
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        position: fixed;
+        margin: 0%;
+        padding: 0;
+        transition: ease ;
+      }
+      #loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 70px;
+        width: 70px;
+        margin: -35px 0 0 -35px;
+      }
   
-</pre>
-<br>
-<br>
-<h2 class="panel-title">
-    <f>5</f> <b>Input</b> a day number <b>& </b>display the <b>Day</b>
-</h2>
-<br>
-<pre class="code property">
-<span class="l"> </span> 
-<span class="l comments">  //input a day number & display the day </span> 
-<span class="l"> </span> 
-<span class="l"> </span> int d ;
-<span class="l"> </span> cout << " enter day no ( 1 to 7 ) :";
-<span class="l"> </span> cin >> d;
-<span class="l"> </span> 
-<span class="l"> </span> switch (d)
-<span class="l"> </span> {
-<span class="l"> </span> case 1 :  cout << "sunday"  ; break;
-<span class="l"> </span> case 2 :  cout << "monday"  ; break;
-<span class="l"> </span> case 3 :  cout << "tuesday"  ; break;
-<span class="l"> </span> case 4 :  cout << "wednesday"  ; break;
-<span class="l"> </span> case 5 :  cout << "thursday"  ; break;
-<span class="l"> </span> case 6 :  cout << "saturday"  ; break;
-<span class="l"> </span> case 7 :  cout << "friday"  ; break;
-<span class="l"> </span> 
-<span class="l"> </span> default: cout << " Invalid " ; break;
-<span class="l"> </span> }
-</pre>
-
-<br>
-<br>
+      #loader span {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+        -webkit-animation: loader 1.5s infinite ease-out;
+        animation: loader 1.5s infinite ease-out;
+      }
+  
+      #loader span:nth-child(1) {
+        left: 0px;
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+      }
+  
+      #loader span:nth-child(2) {
+        left: 25px;
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+  
+      #loader span:nth-child(3) {
+        left: 45px;
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+      }
+  
+      #loader span:nth-child(4) {
+        left: 65px;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+      }
+  
+      @keyframes loader {
+        0% {
+          background: #161069;
+          -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+        }
+        50% {
+          background: #161069;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        100% {
+          background: #3225ec;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+  
+      @-webkit-keyframes loader {
+        0% {
+          background: #1e10ec;
+          -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+        }
+        50% {
+          background: rgba(0, 0, 0, 0.25);
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        100% {
+          background: #161069;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      img {
+        border-radius: 10px;
+        width: 85%;
+      }
+    </style>
+    
+<div id="back">
+  <div id="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
+    <div class="container">
+      <div class="gap"></div>
+      <div>
+        <h1>Lets start.</h1>
+      <h3>First Install ( ⚫ <h2>spck code editor</h2>
+        <img width="90%" src="./src/spck.jpg" alt="spck"> <br><br>
+        )  and set your development enviorment, we use spack editor to create ( ⚫ <h2>new folder</h2> ) first then ( ⚫ <h2>index.html</h2> ) file.</h3>
+      <h3> ( ⚫ Reminding We Use <h2>confetti();</h2> Library.</h3>
+      </div>
+      <div class="gap">
+      </div>
+      <h1>🔵 links</h1>
+<pre>
+    <code class="language-html">
+ &lt;title&gt;Guess Game ▲ &lt;/title&gt;
+ &lt;meta charset="UTF-8" /&gt;
+ &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+ &lt;link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /&gt;
+ &lt;script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"&gt; &lt;/script&gt;
+  </code>
+</pre>
+
+<div class="gap"></div>
+<h1>🔵 Basic Html</h1>
+<pre>
+  <code class="language-html">
+&lt;html&gt;
+  &lt;head&gt;
+    🔵 Links Here
+    &lt;style&gt;
+        🔵 CSS Here
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;🔵 Header&lt;/header&gt;
+    &lt;section&gt;🔵 Section&lt;/section&gt;
+    &lt;footer&gt;🔵 Footer&lt;/footer&gt;
+  &lt;/body&gt;
+  &lt;script&gt;
+    🔵 Java Script
+  &lt;/script&gt;
+&lt;/html&gt;
+
+  </code>
+</pre>
+<div class="gap"></div>
+<h1>🔵 Header </h1>
+
+<pre>
+<code class="language-html">
+&lt;header&gt;
+  &lt;div class="logo"&gt;
+      &lt;h3&gt;Guess Game ▲&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="abox"&gt;
+      &lt;h3&gt;attempts&lt;/h3&gt;
+      &lt;h2 id="count"&gt;0&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code>
+</pre>
 
 
-<br>
+<div class="gap"></div>
+<h1>🔵 Section</h1>
+<pre>
+<code class="language-html">
+&lt;section&gt;
+  &lt;div&gt;
+      &lt;h4&gt;
+          Guess the Number Btw 1 to 100 &lt;br&gt;
+          in minimum attempts
+      &lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+      &lt;h1 id="Number"&gt;&lt;/h1&gt;
+      &lt;div&gt;
+          &lt;h2 id="win"&gt;Input&lt;/h2&gt;
+          &lt;h3 id="Info"&gt; Your Guess..&lt;/h3&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code>
+</pre>
 
-<br>
-<br>
+<div class="gap"></div>
+<h1>🔵 Footer</h1>
+<pre>
+<code class="language-html">
+&lt;footer&gt;
+  &lt;div&gt;
+      &lt;p&gt;Input &amp;nbsp&semi; &lt;/p&gt;
+      &lt;input id="input" onkeydown="if( event.key === 'Enter') guess()" type="number"&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+</code>
+</pre>
 
-</div>
+<div class="gap"></div>
+<h1>🔵 Css Design</h1>
+<pre>
+<code class="language-css">
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: "Raleway";
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+div.logo {
+    width: 180px;
+}
+div.abox {
+    width: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #bfd9ff;
+    border-radius: 10px 0 0 10px;
+}
+h2#count {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+section {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+footer {
+    width: 100%;
+    background: #bfd9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer div {
+    display: flex;
+}
+</code>
+</pre>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js'></script>
-
-<script>
-    $(document).ready(function () {
-        $('pre').each(function (i, block) {
-            hljs.highlightBlock(block);
-        });
-    });
-
-    $(document).ready(function () {
-        new Clipboard("#copy-button", {
-            text: function (trigger) {
-                var str = $(trigger).closest('.panel').find('pre').text();
-                return str.replace(/ /g, "");
-            }
-        });
-    });
-</script>
-
-<script>
-    const copyButtons = document.querySelectorAll(".btn-primary");
-
-    copyButtons.forEach(function (copyButton) {
-        copyButton.addEventListener("click", function () {
-            let target = copyButton;
-            let range = document.createRange();
-            range.selectNode(target);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();
-            copyButton.textContent = "Copied!";
-        });
-    });
-</script>
 
 
-<style>
-    .fontawesomesvg {
-        width: 1em;
-        height: 1em;
-        vertical-align: -.125em;
+
+<div class="gap"></div>
+<h1>🔵 JavaScript</h1>
+<pre><code class="language-javascript">
+  // Random number Btw 1 to 100
+  var guessMe = Math.floor(Math.random() * 100) + 1;
+  var attempt = 0;
+
+  function guess() {
+    var input = document.getElementById("input");
+    var number = document.getElementById("Number");
+    var x = input.value;
+    var info = document.getElementById("Info");
+    var count = document.getElementById("count");
+    var win = document.getElementById("win");
+
+    // Clearing Content
+    number.textContent = "";
+    info.textContent = "";
+    count.textContent = "";
+    win.textContent = "";
+
+    // Show the Content
+    number.textContent = x;
+    attempt++;
+    count.textContent = attempt;
+
+    // operaion
+    if (x > guessMe) {
+      info.textContent = "Too High...";
+    } else if (x < guessMe) {
+      info.textContent = "Too Low...";
+    } else {
+      win.textContent = "Congratulation! You guessed it!";
+      info.textContent = " in " + attempt + "th attempt ";
+      confetti();
     }
+
+    input.value = "";
+  }
+</code></pre>
+<style>
+  .my a {
+    color: #e90;
+    font-size: 30px;
+  }
 </style>
+<div class="gap"></div>
+<div>
+  <h1>Oops thats it.</h1>
+<h3>We Created ( ⚫ <h2>Mini Game</h2> ) 
+  <div class="my">
+    <a href="https://anfaskpgame.vercel.app/">https://anfaskpgame.vercel.app/</a>
+  </div>
+<h3> ( ⚫  We Could Modify This Game To Another <h2>Game</h2>, Thank You All.</h3>
+<br>
+<br><br>
+<code>
+  <h3>~ Mohammed Anfas K P</h3>
+</code>
+<br><br><br>
+<div class="gap"></div>
+<div class="my"><code>YouTub : <br></code> <a href="https://www.youtube.com/@anfaskp">https://www.youtube.com/@anfaskp</a></div>
+</div>
+<div class="gap">
+</div>
+<div class="gap"></div>
+<div class="gap"></div>
 
-</body>
+    <script>
+      function forEachElement(selector, fn) {
+  var elements = document.querySelectorAll(selector);
+  for (var i = 0; i < elements.length; i++) fn(elements[i], i);
+}
 
+forEachElement("pre>code[class*='language-']", function (el, i) {
+  el.parentNode.insertAdjacentHTML(
+    "beforebegin",
+    "<div class='code-header'><a class='copy-code'>Copy</a></div>"
+  );
+});
+
+forEachElement(".copy-code", function (el, i) {
+  el.addEventListener("click", function () {
+    var body = document.getElementsByTagName("body")[0];
+
+    var txt = document.createElement("textarea");
+    txt.setAttribute("id", "txt-cpy");
+    txt.style.position = "absolute";
+    txt.style.left = "-9999em";
+    txt.value = el.parentNode.nextElementSibling.textContent;
+    body.appendChild(txt);
+
+    document.getElementById("txt-cpy").select();
+
+    var div = document.createElement("div");
+
+    div.setAttribute("class", "msg-alert");
+    try {
+      var successful = document.execCommand("copy");
+      successful
+        ? (div.innerHTML = "Successfully copied to clipboard !")
+        : (div.innerHTML = "Fail to copy to clipboard !");
+      body.appendChild(div);
+      confetti();
+    } catch (err) {
+      console.log("Oops, unable to copy");
+    }
+
+    body.removeChild(txt);
+    setTimeout(function () {
+      body.removeChild(div);
+    }, 2000);
+  });
+
+  var copyButtons = document.getElementsByClassName("copy-code");
+  var copyElements = document.getElementsByClassName("copy-code");
+
+  // Loop through each copy button
+  Array.from(copyButtons).forEach(function (copyButton) {
+    copyButton.addEventListener("click", function () {
+      // Change the content of all elements with the class "copy-code" to "copied"
+      Array.from(copyElements).forEach(function (copy) {
+        copy.textContent = "copied";
+
+        // After one second, change it back to "copy"
+        setTimeout(function () {
+          copy.textContent = "copy";
+        }, 1000); // 1000 milliseconds = 1 second
+      });
+    });
+  });
+});
+
+    </script>
+        <script>
+document.getElementById("back").style.display = "block";
+  setTimeout(function() {
+    // Hide the loader after 2 seconds
+    document.getElementById("back").style.display = "none";
+  }, 2600);
+        </script>
+  </body>
 </html>
