@@ -1,0 +1,16 @@
+{
+  "index": "Introduction",
+  "foundation": "Foundation",
+  "fold1": "Solution 1 >> 5",
+  "fold2": "Solution 6 >> 20",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  }
+}

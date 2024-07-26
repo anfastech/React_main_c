@@ -1,0 +1,29 @@
+{
+  "name": "cyera",
+  "version": "0.1.1",
+  "description": "practicals docs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Mohammed Anfas K P <g@anfas.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@next/mdx": "^14.2.5",
+    "next": "^14.2.5",
+    "nextra": "latest",
+    "nextra-theme-docs": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.10",
+    "typescript": "^4.9.3"
+  }
+}

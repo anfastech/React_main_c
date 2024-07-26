@@ -1,0 +1,68 @@
+# Simple C Programming
+
+#### Contents
+
+| No. | Description                                                    |
+|-----|----------------------------------------------------------------|
+| 1   | Quadratic equation                                             |
+| 2   | Sum of digits and reverse of a number                          |
+| 3   | Nth Fibonacci number                                           |
+| 4   | Positives, negatives, and zeros in a set of n numbers          |
+| 5   | Evaluate series: 1 + x + x<sup>2</sup>&frasl;<sub>2!</sub> + x<sup>3</sup>&frasl;<sub>3!</sub> + ... + x<sup>n</sup>&frasl;<sub>n!</sub> |
+| 6   | Pyramid display using *                                        |
+| 7   | Armstrong numbers in a range                                   |
+| 8   | Scientific calculator with 8 functions                         |
+| 9   | Pattern display with a number (e.g., N=39174: 3 9 1 7 4)       |
+| 10  | Leap years in a range                                          |
+| 11  | Convert decimal to new base                                    |
+| 12  | Standard deviation of n numbers                                |
+| 13  | Location of a number in an array                               |
+| 14  | Append arrays A and B                                          |
+| 15  | Currency denomination                                          |
+| 16  | Matrix transpose                                               |
+| 17  | Upper triangle with 1, lower with -1, diagonal with zero in a 2D array |
+| 18  | <span style={{ opacity: '0.2' }}>Matrix multiplication</span> |
+| 19  | Factorial of a number using recursion                          |
+| 20  | <span style={{ opacity: '0.2' }}>Prime numbers</span> |
+| 21  | <span style={{ opacity: '0.2' }}>Short form of a string</span> |
+| 22  | Number of vowels in a string                                   |
+| 23  | Mark list of N students using array of structures               |
+| 24  | <span style={{ opacity: '0.2' }}>String length using pointer</span> |
+| 25  | <span style={{ opacity: '0.2' }}>Odd and even numbers to files</span> |
+
+
+
+#### Writing Basic C Program
+
+To start programming in C , you need to understand the structure of a basic C program.<br /> Here’s a simple example:
+
+```c filename="main.c" /<conio.h>/ /clrscr();/ /getch();/ copy 
+#include <stdio.h>
+#include <conio.h>
+ 
+void main() {
+    int number = 20 ;
+    clrscr();
+
+    printf("the number = %d",number);
+    getch();
+}
+
+```
+
+#### Explanation
+
+`#include <stdio.h>`: This line tells the compiler to include the Standard Input Output library before compiling the program. This library is necessary for functions like printf. <br />
+`void main()`: This is the main function where the execution of the program begins. Every C program must have a main function. <br />
+`printf("Value = %g",value);`: This function prints the text to the screen. <br /> The `%g` is a datatype representation characters that print the representing data in the console. 
+#### Other
+
+
+| Format Specifier | Description               | Example                           |
+|------------------|---------------------------|-----------------------------------|
+| `%d`             | Integer                   | `int age = 25;`                   |
+| `%f`             | Double (floating-point)   | `double pi = 3.14;`               |
+| `%g`             | General format            | `printf("%g", pi);` |
+| `%s`             | Array of characters (string) | `char name[] = "Spiderman";`    |
+| `%c`             | Character                 | `char initial = 'S';`             |
+
