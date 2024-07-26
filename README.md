@@ -1,23 +1,10 @@
-# Cyera Docs of C Programming
+# Cyera
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Welcome to Cyera!
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+Cyera is your go-to guide for practical C programming. Developed by your friendly neighborhood Spiderman, this guide aims to make learning C both straightforward and enjoyable. It features hands-on examples and detailed explanations to help you master essential programming concepts.
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+## Overview
 
-## Quick Start
+Cyera provides practical solutions to common C programming problems. With clear explanations and example code, it’s designed to assist learners in understanding and applying C programming techniques effectively.
 
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
-
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
