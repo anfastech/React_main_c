@@ -8,14 +8,14 @@ const config: DocsThemeConfig = {
         <path d="M50 10L90 90L10 90L50 10Z" fill="currentColor" />
       </svg> */}
       <span style={{ marginLeft: ".4em", fontWeight: 900, fontSize: "1.5rem" }}>
-        Cyrea App
+        Cyrea Code
       </span>
     </>
   ),
   project: {
     link: "https://github.com/anfastech/cyera-docs.git",
   },
-  docsRepositoryBase: "https://github.com/anfastech/cyera-docs.git",
+  docsRepositoryBase: "https://github.com/anfastech/cyera-docs/tree/main",
   footer: {
     text: "Cyera Gibit Corp",
   },
