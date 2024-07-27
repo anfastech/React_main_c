@@ -109,23 +109,28 @@ void main()
                                       |
                                       V
                                   Is x > 0?     
-                                 /         \     
-                                /           \    
-                              Yes           No    
-                             /                \    
-                            /                  \   
-                           V                    V   
-                   Increment pc              Is x < 0?  
-                           |                 /       \    
-                           |               Yes       No  
-                           |               /           \  
-                           |              V             V  
-                           |       Increment nc    Increment zc  
-                           V              |             |    
-                           |              V             V    
-                           |             End           End    
-                           |                   
-                           V                   
-                          End
+                                 /        \     
+                                /          \     
+                               /            \     
+                              /              \     
+                             /                \     
+                            /                  \     
+                           /                    \    
+                         Yes                    No    
+                        /                         \    
+                       /                           \   
+                      V                             V   
+                 Increment pc                    Is x < 0?  
+                    |                            /       \    
+                    |                          Yes       No  
+                    |                          /           \  
+                    |                         V             V  
+                    |                   Increment nc    Increment zc  
+                    V                         |              |    
+                    |                         V              V    
+                    |                        End            End    
+                    |                   
+                    V                   
+                   End
 
 ```

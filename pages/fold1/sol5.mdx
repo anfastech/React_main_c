@@ -1,26 +1,83 @@
 import { Tabs } from "nextra/components";
 
-# Title
+# Evaluate the Series e<sup>2</sup>
 
-Introduction
+This program calculates the value of the series  <span class="hinfo nx-border-blue-200 nx-bg-blue-100 nx-text-blue-900 dark:nx-border-blue-200/30 dark:nx-bg-blue-900/30 dark:nx-text-blue-200">e<sup>x</sup></span> using the formula: <span class="hinfo nx-border-blue-200 nx-bg-blue-100 nx-text-blue-900 dark:nx-border-blue-200/30 dark:nx-bg-blue-900/30 dark:nx-text-blue-200">e<sup>x</sup> = 1 + x/1! + x<sup>2</sup>/2! + x<sup>3</sup>/3! + .... + x<sup>n</sup>/n! </span> It prompts the user to enter the value for `x` and the number of terms `n` to include in the series. The program then computes the sum of the series up to `n` terms and displays the result.
 
 ### Code Breakdown
 
 ## Algorithm
 
-Algorithm steps go here
+1. **Start**
+2. **Input Value for x**: Read the value of `x` from the user.
+3. **Input Number of Terms**: Read the number of terms `n` to be added in the series.
+4. **Initialize Variables**:
+   - Set `term` to 1.
+   - Set `sum` to 0.
+5. **Calculate Series**:
+   - Loop from `i = 1` to `n`:
+     - Add `term` to `sum`.
+     - Update `term` as `term * x / i`.
+6. **Display Result**:
+   - Print the result of `e^x` up to `n` terms.
+7. **End**
+
 
 ## Code Explanation
 
 <Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
   <Tabs.Tab>
 ```c filename="Detailed" copy showLineNumbers
-// Detailed code goes here
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int i, n;
+    float x, term, sum;
+    clrscr(); // Clear the screen (specific to some compilers, not standard C).
+
+    printf("Enter the value for x : ");
+    scanf("%f", &x); // Take input for the value of x.
+
+    printf("\nEnter the number of terms to be added : ");
+    scanf("%d", &n); // Take input for the number of terms.
+
+    // Initialize term and sum
+    for (term = 1, sum = 0, i = 1; i <= n; i++)
+    {
+        sum = sum + term; // Add term to sum.
+        term = term * x / i; // Update term for the next iteration.
+    }
+
+    printf("\n e^%g = %g", x, sum); // Print the result of e^x.
+
+    getch(); // Wait for a key press before exiting (specific to some compilers).
+}
 ```
 </Tabs.Tab>
 <Tabs.Tab>
 ``` c filename="plain" copy showLineNumbers
-// Plain code goes here
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int i, n;
+    float x, term, sum;
+    clrscr();
+    printf("Enter the value for x : ");
+    scanf("%f", &x);
+    printf("\nEnter the number of terms to be added : ");
+    scanf("%d", &n);
+    for(term = 1, sum = 0, i = 1; i <= n; i++)
+    {
+        sum = sum + term;
+        term = term * x / i;
+    }
+    printf("\n e^%g = %g", x, sum);
+    getch();
+}
 ```
 </Tabs.Tab>
 </Tabs>
@@ -28,6 +85,32 @@ Algorithm steps go here
 ### Example Flowchart
 
 ```plaintext
-
-# Blank
+                              Start
+                                |
+                                V
+                        Input value for x
+                                |
+                                V
+                     Input number of terms n
+                                |
+                                V
+                  Initialize term = 1, sum = 0
+                                |
+                                V
+                          For i = 1 to n
+                                |
+                                V
+                         Add term to sum
+                                |
+                                V
+                     Update term as term * x / i
+                                |
+                                V
+                           End of loop
+                                |
+                                V
+                     Display result e^x = sum
+                                |
+                                V
+                               End
 ```

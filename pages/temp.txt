@@ -1,0 +1,73 @@
+import { Tabs } from "nextra/components";
+
+# Title
+
+Introduction
+
+### Code Breakdown
+
+## Algorithm
+
+Algorithm steps go here
+
+## Code Explanation
+
+<Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+// Detailed code goes here
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="plain" copy showLineNumbers
+// Plain code goes here
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+
+# Blank
+```
+
+
+--------------------------------------------------
+
+# About
+
+This is the about page! This page is shown on the navbar.
+
+I am Mohammed Anfas K P, I'm fascinating fellow student love advantages of technology 
+
+```js filename="demo.js" /let/ {3} copy
+let a = 1;
+
+console.log(a);
+```
+
+
+## Component
+
+import { useState } from 'react'
+
+{/* Import CSS modules */}
+import styles from '../components/counters.module.css'
+
+export const Counter = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)} className={styles.counter}>Clicked {count} times</button>
+    </div>
+  );
+};
+
+<Counter/>
+
+## External Component
+
+import Counters from '../components/counters'
+
+<Counters />
