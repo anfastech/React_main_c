@@ -1,32 +1,209 @@
-import { Callout, Cards, Card } from 'nextra/components'
-import { WarningIcon, CardsIcon, OneIcon} from '../../icons'
+import { Tabs } from "nextra/components";
 
-# Under Construction
+# Armstrong Numbers in a Range
+
+Armstrong numbers are numbers that are equal to the sum of their own digits each raised to the power of the number of digits. For example, 153 is an Armstrong number because  1^3 + 5^3 + 3^3 = 153 . In this example, we will find all Armstrong numbers within a given range. The program prompts the user to enter a lower and upper bound for the range and then identifies and displays all Armstrong numbers within that range.
+
+### Code Breakdown
+
+## Algorithm
+
+1. **Start**
+2. Initialize variables: `i`, `n`, `d`, `lb`, `ub`, `p`, `s`, `x`, `t`.
+3. Prompt the user to enter the lower bound `lb` and upper bound `ub`.
+4. Loop through each number `x` from `lb` to `ub`:
+   1. **Count Digits**:
+      - Initialize `n` to count the number of digits in `x`.
+      - For each digit of `x`, increase `n` by 1.
+   2. **Calculate Armstrong Sum**:
+      - Initialize `s` to 0.
+      - For each digit of `x`:
+        - Calculate `p` as the digit raised to the power of `n`.
+        - Add `p` to `s`.
+   3. **Check Armstrong Number**:
+      - If `s` equals `x`, then `x` is an Armstrong number. Print `x`.
+5. **End**
+
+## Code Explanation
+
+<Tabs items={['Depth while loop','Depth for loop', 'Clear code']} defaultIndex="1">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int digit, numDigits, currentDigit;
+    long lowerBound, upperBound, power, sumOfPowers, number, temp;
+
+    // Clear the console screen
+    clrscr();
+    
+    // Prompt user to enter the range
+    printf("Enter the range : ");
+    scanf("%ld%ld", &lowerBound, &upperBound);
+
+    // Print the header for Armstrong numbers
+    printf("\nArmstrong numbers in the range %ld to %ld are :\n", lowerBound, upperBound);
+
+    // Loop through each number in the specified range
+    for (number = lowerBound; number <= upperBound; number++)
+    {
+        // Determine the number of digits in the current number
+        numDigits = 0;
+        temp = number;
+        while (temp != 0) {
+            temp /= 10;
+            numDigits++;
+        }
+
+        // Compute the sum of the digits each raised to the power of numDigits
+        sumOfPowers = 0;
+        temp = number;
+        while (temp != 0)
+        {
+            currentDigit = temp % 10; // Extract the last digit
+            power = 1; // Initialize power variable
+            for (digit = 0; digit < numDigits; digit++) {
+                power *= currentDigit; // Calculate currentDigit raised to the power of numDigits
+            }
+            sumOfPowers += power; // Add the power to the sum
+            temp /= 10; // Remove the last digit
+        }
+
+        // Print the number if it is an Armstrong number
+        if (sumOfPowers == number) {
+            printf("\n%ld", number); // Print the Armstrong number
+        }
+    }
+
+    getch(); // Wait for user input before closing
+}
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="for loop" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int i, n, d;       // Variables for iteration and digit extraction
+    long lb, ub, p, s, x, t;  // Variables for range limits, power, sum, and current number
+
+    clrscr();  // Clear the screen (conio.h function, may not work in all compilers)
+
+    // Prompt user to enter the range of numbers
+    printf("Enter the range : ");
+    scanf("%ld%ld", &lb, &ub);  // Read the lower and upper bounds of the range
+
+    // Print a message indicating the range being checked
+    printf("\nArmstrong numbers in the range %ld to %ld are :\n", lb, ub);
+
+    // Iterate through each number in the specified range
+    for(x = lb; x <= ub; x++)
+    {
+        // Calculate the number of digits in the current number
+        for(n = 0, t = x; t != 0; t /= 10, n++);
+
+        // Initialize sum to 0
+        for(s = 0, t = x; t != 0; t /= 10)
+        {
+            d = t % 10;  // Extract the last digit
+            p = 1;       // Initialize power to 1
+
+            // Calculate the power of the digit and add to sum
+            for(i = 0; i < n; i++, p *= d);
+
+            s += p;  // Add the powered digit to the sum
+        }
+
+        // Check if the sum of powered digits equals the original number
+        if(s == x) 
+            printf("\n%ld", x);  // Print the Armstrong number
+    }
+
+    getch();  // Wait for a key press before exiting (conio.h function, may not work in all compilers)
+}
+```
+</Tabs.Tab>
+<Tabs.Tab>
+```c filename="plain" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int i,n,d;
+	long lb,ub,p,s,x,t;
+	clrscr();
+	printf("Enter the range : ");
+	scanf("%ld%ld",&lb,&ub);
+	printf("\nArmstrong numbers in the range %ld to %ld are :\n",lb,ub);
+	for(x=lb;x<=ub;x++)
+	{
+		for(n=0,t=x;t!=0;t/=10,n++);
+		for(s=0,t=x;t!=0;t/=10)
+		{
+			d=t%10;
+			for(p=1,i=0;i<n;i++,p*=d);
+			s+=p;
+		}
+		if(s==x) printf("\n%ld",x);
+	}
+	getch();
+}
+
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+                                  Start
+                                    |
+                                    V
+                       Input lowerBound, upperBound
+                                    |
+                                    V
+                  For each number from lowerBound to upperBound
+                                    |
+                                    V
+           Calculate the number of digits (numDigits) in current number
+                                    |
+                                    V
+                  Initialize sum of powered digits (sum = 0)
+                                    |
+                                    V
+                      +---------------------------+
+                      | For each digit in number: |
+                      | ------------------------- |
+                      | Extract last digit:       |
+                      | digit = number % 10       |
+                      | Raise digit to power:     |
+                      | power = digit^numDigits   |
+                      | Add power to sum:         |
+                      | sum += power              |
+                      | Remove last digit:        |
+                      | number /= 10              |
+                      +---------------------------+
+                                    |
+                                    V
+            Is sum of powered digits equal to the original number?
+                     /                             \
+                    /                               \
+                  Yes                               No
+                   |                                 |
+                   V                                 V
+      Print number as Armstrong number      Continue to next number
+                   |                                 |
+                   V                                 |
+                  End                                |
+                                                     |
+                                                     V
+                                                    End
 
 
-<Callout emoji="🚧">
-  This page is currently under construction. Please check back later !
-</Callout>
-
-#### Updating Content Dynamically
-At this moment, we're working on enhancing this page to offer you more valuable content and resources. Here’s what you can expect:
-
-<Cards>
-  <Card 
-    icon={<CardsIcon />} 
-    title="Foundation Page" 
-    href="/foundation" 
-  />
-  <Card 
-    icon={<WarningIcon />} 
-    title="About Us" 
-    href="/about" 
-  />
-  <Card 
-    icon={<OneIcon />} 
-    title="Connect on Instagram" 
-    href="https://www.instagram.com/by.anfas" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  />
-</Cards>
+```

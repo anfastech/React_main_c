@@ -1,8 +1,9 @@
 {
   "index": "Introduction",
   "foundation": "Foundation",
-  "fold1": "Solution 1 to 8",
-  "fold2": "Solution 8 to -",
+  "fold1": "Solution 1 to 6",
+  "fold2": "Solution 6 to 12",
+  "fold3": "Solution 12 to 25",
   "Home": {
     "title": "Home",
     "type": "page",

@@ -1,32 +1,271 @@
-import { Callout, Cards, Card } from 'nextra/components'
-import { WarningIcon, CardsIcon, OneIcon} from '../../icons'
+import { Tabs } from "nextra/components";
 
-# Under Construction
+# Scientific Calculator
 
+This C program implements a basic scientific calculator using the console. The calculator offers various mathematical functions including trigonometric functions (sin, cos, tan), logarithmic functions (natural log, base-10 log), exponentiation (e^x), square root, and factorial calculation. 
+The user is presented with a menu to choose the desired operation. Depending on the choice, the program performs the corresponding calculation using the input value and displays the result. The program continues to run until the user chooses to exit by selecting the appropriate option from the menu.
 
-<Callout emoji="🚧">
-  This page is currently under construction. Please check back later !
-</Callout>
+### Code Breakdown
 
-#### Updating Content Dynamically
-At this moment, we're working on enhancing this page to offer you more valuable content and resources. Here’s what you can expect:
+## Algorithm
 
-<Cards>
-  <Card 
-    icon={<CardsIcon />} 
-    title="Foundation Page" 
-    href="/foundation" 
-  />
-  <Card 
-    icon={<WarningIcon />} 
-    title="About Us" 
-    href="/about" 
-  />
-  <Card 
-    icon={<OneIcon />} 
-    title="Connect on Instagram" 
-    href="https://www.instagram.com/by.anfas" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  />
-</Cards>
+1. **Start**
+2. **Initialize Variables**
+   - `float x;`
+   - `int choice;`
+   - `long f;`
+3. **Display Menu**
+   - Show available operations.
+4. **Accept User Choice**
+   - Read user input for the choice.
+5. **Check Choice Validity**
+   - If choice is valid (1-9), proceed.
+   - If choice is 9, exit the program.
+6. **Prompt for Value**
+   - Read the value of `x` from the user.
+7. **Perform Calculation Based on Choice**
+   - Use `switch` statement to execute the selected operation:
+     - **1:** Calculate `sin(x)` in degrees.
+     - **2:** Calculate `cos(x)` in degrees.
+     - **3:** Calculate `tan(x)` in degrees.
+     - **4:** Calculate `log(x)` (natural logarithm).
+     - **5:** Calculate `log10(x)` (base-10 logarithm).
+     - **6:** Calculate `e^x`.
+     - **7:** Calculate `sqrt(x)`.
+     - **8:** Calculate factorial of `x`.
+8. **Display Result**
+   - Print the result of the calculation.
+9. **Repeat**
+   - Go back to the menu for another operation.
+10. **End**
+
+## Code Explanation
+
+<Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+#include <stdio.h>  // Header file for input and output functions
+#include <conio.h>  // Header file for console input/output functions
+#include <math.h>   // Header file for mathematical functions
+
+#define PI (22.0 / 7)  // Define a constant PI with an approximation of 22/7
+
+int main() {
+    float x;           // Variable to store the user input value for calculations
+    int choice;        // Variable to store the user's menu choice
+    long f;            // Variable to store the result of factorial calculation
+    int i;             // Loop variable
+
+    do {
+        clrscr();      // Clear the console screen
+
+        // Display the calculator menu
+        printf("\nScientific Calculator");
+        printf("\n---------------------");
+        printf("\n\t1. Sin(x)");       // Option to calculate sine of x
+        printf("\n\t2. Cos(x)");       // Option to calculate cosine of x
+        printf("\n\t3. Tan(x)");       // Option to calculate tangent of x
+        printf("\n\t4. Logn(x)");      // Option to calculate natural logarithm of x
+        printf("\n\t5. Log10(x)");     // Option to calculate base-10 logarithm of x
+        printf("\n\t6. e^x");          // Option to calculate e raised to the power x
+        printf("\n\t7. Squareroot(x)"); // Option to calculate square root of x
+        printf("\n\t8. x!");           // Option to calculate factorial of x
+        printf("\n\t9. Exit");         // Option to exit the program
+        printf("\n\nEnter your choice (1-9): ");
+        scanf("%d", &choice); // Read the user's choice
+
+        if (choice < 1 || choice > 9) continue; // Skip invalid choices
+        else if (choice == 9) break;           // Exit the loop if choice is 9
+
+        printf("\nx? ");
+        scanf("%f", &x); // Read the value of x
+
+        // Perform the selected operation
+        switch (choice) {
+            case 1: // Calculate sin(x)
+                printf("\n%g", sin(x * PI / 180)); // Convert x to radians and compute sin(x)
+                break;
+            case 2: // Calculate cos(x)
+                printf("\n%g", cos(x * PI / 180)); // Convert x to radians and compute cos(x)
+                break;
+            case 3: // Calculate tan(x)
+                printf("\n%g", tan(x * PI / 180)); // Convert x to radians and compute tan(x)
+                break;
+            case 4: // Calculate natural log of x
+                printf("\n%g", log(x)); // Compute natural logarithm of x
+                break;
+            case 5: // Calculate base-10 log of x
+                printf("\n%g", log10(x)); // Compute base-10 logarithm of x
+                break;
+            case 6: // Calculate e^x
+                printf("\n%g", exp(x)); // Compute e raised to the power x
+                break;
+            case 7: // Calculate square root of x
+                printf("\n%g", sqrt(x)); // Compute square root of x
+                break;
+            case 8: // Calculate factorial of x
+                for (f = 1, i = 2; i <= x; f *= i, i++); // Compute factorial iteratively
+                printf("\n%ld", f); // Print the factorial result
+                break;
+            default:
+                continue; // Continue to the next iteration for invalid choices
+        }
+
+        getch(); // Wait for a key press to continue
+
+    } while (1); // Repeat the loop indefinitely
+
+    return 0; // Exit the program
+}
+
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="plain" copy showLineNumbers
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+#define PI (22.0 / 7)
+
+int main() {
+    float x;
+    int choice, i;
+    long f;
+
+    do {
+        clrscr();
+        printf("\nScientific Calculator");
+        printf("\n---------------------");
+        printf("\n\t1. Sin(x)\n\t2. Cos(x)\n\t3. Tan(x)");
+        printf("\n\t4. Logn(x)\n\t5. Log10(x)\n\t6. e^x");
+        printf("\n\t7. Squareroot(x)\n\t8. x!\n\t9. Exit");
+        printf("\n\nEnter your choice (1-9): ");
+        scanf("%d", &choice);
+
+        if (choice < 1 || choice > 9) continue;
+        else if (choice == 9) break;
+
+        printf("\nx? ");
+        scanf("%f", &x);
+
+        switch (choice) {
+            case 1:
+                printf("\n%g", sin(x * PI / 180));
+                break;
+            case 2:
+                printf("\n%g", cos(x * PI / 180));
+                break;
+            case 3:
+                printf("\n%g", tan(x * PI / 180));
+                break;
+            case 4:
+                printf("\n%g", log(x));
+                break;
+            case 5:
+                printf("\n%g", log10(x));
+                break;
+            case 6:
+                printf("\n%g", exp(x));
+                break;
+            case 7:
+                printf("\n%g", sqrt(x));
+                break;
+            case 8:
+                for (f = 1, i = 2; i <= x; f *= i, i++);
+                printf("\n%ld", f);
+                break;
+            default:
+                continue;
+        }
+
+        getch();
+    } while (1);
+
+    return 0;
+}
+
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+
+                               Start
+                                 |
+                                 V
+                      Display Menu Options
+                  1. Sin(x)      2. Cos(x)   3. Tan(x)
+                  4. Logn(x)     5. Log10(x)   6. e^x
+             7. Squareroot(x)    8. x!    9. Exit
+                                 |
+                                 V
+                      Get User Choice (1-9)
+                     / | | | | | | | | \
+                    /  | | | | | | |  \
+                   /   | | | | | | |   \
+                  /    | | | | | | |    \
+         Choice < 1 or Choice > 9   Choice == 9
+            /                             \
+           /                               \
+       Continue Loop                        Exit Program
+           |
+           V
+      Prompt for x
+           |
+           V
+       Perform Calculation
+           |
+           +--------------------------+
+           |                          |
+           V                          V
+        Case 1: Sin(x)              Case 2: Cos(x)
+           |                          |
+           V                          V
+       Print Result              Print Result
+           |
+           V
+       End of Calculation
+           |
+           +--------------------------+
+           |                          |
+           V                          V
+        Case 3: Tan(x)             Case 4: Logn(x)
+           |                          |
+           V                          V
+       Print Result              Print Result
+           |
+           V
+       End of Calculation
+           |
+           +--------------------------+
+           |                          |
+           V                          V
+        Case 5: Log10(x)           Case 6: e^x
+           |                          |
+           V                          V
+       Print Result              Print Result
+           |
+           V
+       End of Calculation
+           |
+           +--------------------------+
+           |                          |
+           V                          V
+       Case 7: Squareroot(x)       Case 8: x!
+           |                          |
+           V                          V
+       Print Result              Calculate Factorial
+           |                          |
+           V                          V
+       Print Result              Print Result
+           |
+           V
+       End of Calculation
+           |
+           V
+          End
+
+```

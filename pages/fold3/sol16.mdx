@@ -1,0 +1,126 @@
+import { Tabs } from "nextra/components";
+
+# Matrix Transpose
+
+This program allows the user to input a matrix of any size and then outputs its transpose. The matrix is entered row-wise, and the transpose is computed and displayed. The transpose of a matrix is obtained by swapping rows and columns, effectively flipping the matrix over its diagonal.
+
+### Code Breakdown
+
+## Algorithm
+
+1. **Start**
+2. **Enter the order of the matrix (m x n)**
+3. **Initialize the matrix**
+4. **Input the matrix elements row-wise**
+5. **Display the original matrix**
+6. **Compute and display the transpose of the matrix**
+7. **End**
+
+## Code Explanation
+
+<Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    // Declare a 2D array to store the matrix, and variables for matrix dimensions and loop counters
+    int a[10][10], m, n, i, j;
+    
+    // Clear the screen (specific to older systems or compilers)
+    clrscr();
+    
+    // Prompt the user to enter the dimensions of the matrix (rows and columns)
+    printf("Enter the order : ");
+    scanf("%d%d", &m, &n);
+    
+    // Inform the user to input elements for the matrix
+    printf("\nEnter %d elements into the matrix rowwise : \n", m * n);
+    
+    // Loop to read the matrix elements from the user
+    for(i = 0; i < m; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            // Read an element from the user and store it in the matrix
+            scanf("%d", &a[i][j]);
+        }
+    }
+    
+    // Display the original matrix
+    printf("\nThe matrix entered is:");
+    for(i = 0; i < m; i++)
+    {
+        printf("\n");  // Move to the next line for the new row
+        for(j = 0; j < n; j++)
+        {
+            // Print each element with a field width of 4 for better alignment
+            printf("%4d", a[i][j]);
+        }
+    }
+    
+    // Display the transpose of the matrix
+    printf("\nThe transpose of the matrix entered is:");
+    for(i = 0; i < n; i++)
+    {
+        printf("\n");  // Move to the next line for the new row in the transpose
+        for(j = 0; j < m; j++)
+        {
+            // Print each element of the transposed matrix
+            // Note: Transpose is obtained by swapping rows and columns
+            printf("%4d", a[j][i]);
+        }
+    }
+    
+    // Wait for a key press (specific to older systems or compilers)
+    getch();
+}
+
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="plain" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a[10][10], m, n, i, j;
+    clrscr();
+    printf("Enter the order : ");
+    scanf("%d%d", &m, &n);
+    printf("\nEnter %d elements into the matrix rowwise : \n", m * n);
+    for(i = 0; i < m; i++)
+    {
+        for(j = 0; j < n; j++)
+            scanf("%d", &a[i][j]);
+    }
+    printf("\nThe matrix entered is:");
+    for(i = 0; i < m; i++)
+    {
+        printf("\n");
+        for(j = 0; j < n; j++)
+            printf("%4d", a[i][j]);
+    }
+    printf("\nThe transpose of the matrix entered is:");
+    for(i = 0; i < n; i++)
+    {
+        printf("\n");
+        for(j = 0; j < m; j++)
+            printf("%4d", a[j][i]);
+    }
+    getch();
+}
+
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+
+# Blank
+```

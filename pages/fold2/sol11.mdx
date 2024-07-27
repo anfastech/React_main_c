@@ -1,0 +1,174 @@
+import { Tabs } from "nextra/components";
+
+# Decimal to Any Base Converter
+
+This program converts a decimal number to any base ranging from 2 to 16. It prompts the user to input a decimal number and the target base. The program then performs the conversion by repeatedly dividing the decimal number by the target base and recording the remainders. The remainders are mapped to appropriate characters for bases greater than 10 (using letters A-F for bases up to 16). Finally, the converted number is displayed in the specified base.
+
+
+### Code Breakdown
+
+## Algorithm
+
+1. **Start**
+2. **Input the decimal number and the target base:**
+   - Prompt the user to enter a decimal number.
+   - Prompt the user to enter the base to which the number should be converted (base should be between 2 and 16).
+3. **Check if the base is valid:**
+   - If the base is less than 2 or greater than 16, print "Invalid base" and terminate the program.
+4. **Convert the decimal number to the specified base:**
+   - Initialize an empty string `x` to store the converted number.
+   - Use a loop to repeatedly divide the decimal number by the target base:
+     - Find the remainder `d` of the division.
+     - Map the remainder to its corresponding character:
+       - If the remainder is less than 10, convert it to a character ('0' to '9').
+       - If the remainder is 10 or greater, convert it to a character ('A' to 'F').
+     - Append the character to the string `x`.
+     - Update the number by dividing it by the base.
+   - Reverse the string `x` to get the final converted number.
+5. **Output the result:**
+   - Print the converted number along with the original decimal number and the target base.
+6. **End**
+
+
+## Code Explanation
+
+<Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+void main()
+{
+    int n, r, d, i, t;
+    char x[20];  // Array to store the converted number in the new base
+
+    clrscr();  // Clear the console screen
+
+    // Prompt the user to enter a decimal number
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+
+    // Prompt the user to enter the new base (between 2 and 16)
+    printf("\nEnter a new base (2-16): ");
+    scanf("%d", &r);
+
+    // Check if the base is valid
+    if (r < 2 || r > 16)
+    {
+        printf("\nInvalid base");
+        getch();  // Wait for a key press
+        return;   // Exit the program
+    }
+
+    // Convert the decimal number to the specified base
+    for (t = n, i = 0; t != 0; i++)
+    {
+        d = t % r;  // Find the remainder
+        // Map the remainder to the corresponding character
+        if (d < 10) 
+            x[i] = d + '0';  // For remainders 0-9, use '0'-'9'
+        else 
+            x[i] = d + 55;   // For remainders 10-15, use 'A'-'F'
+        t = t / r;  // Divide the number by the base
+    }
+    x[i] = '\0';  // Null-terminate the string
+
+    // Reverse the string to get the correct representation
+    strrev(x);
+
+    // Print the result
+    printf("\nDecimal number %d in base %d is %s", n, r, x);
+
+    getch();  // Wait for a key press
+}
+
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="plain" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+void main()
+{
+    int n, r, d, i, t;
+    char x[20];
+
+    clrscr();
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+    printf("\nEnter a new base (2-16): ");
+    scanf("%d", &r);
+
+    if (r < 2 || r > 16)
+    {
+        printf("\nInvalid base");
+        getch();
+        return;
+    }
+
+    for (t = n, i = 0; t != 0; i++)
+    {
+        d = t % r;
+        if (d < 10) 
+            x[i] = d + '0';
+        else 
+            x[i] = d + 55;
+        t = t / r;
+    }
+    x[i] = '\0';
+    strrev(x);
+
+    printf("\nDecimal number %d in base %d is %s", n, r, x);
+
+    getch();
+}
+
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+                              Start
+                                |
+                                V
+                     Enter a decimal number (n)
+                                |
+                                V
+                   Enter a new base (r) [2-16]
+                                |
+                                V
+                Is the base valid (2 <= r <= 16)?
+                   /                         \
+                  /                           \
+                 No                           Yes
+                /                               \
+               /                                 \
+   Print "Invalid base"         +---------------------------------+
+             |                  | Calculate remainder (d = n % r) |
+             V                  +---------------------------------+
+            End                 | Map remainder to character:     |
+                                |  - If d < 10: x[i] = d + '0'    |
+                                |  - Else: x[i] = d + 55          |
+                                | Update n to n / r               |
+                                | Increment index (i)             |
+                                +---------------------------------+
+                                                |
+                                                V
+                                 Null-terminate string (x[i] = '\0')
+                                                |
+                                                V
+                                    Reverse the string (x)
+                                                |
+                                                V
+                              Print the decimal number n in base r: x
+                                                |
+                                                V
+                                               End
+
+```
