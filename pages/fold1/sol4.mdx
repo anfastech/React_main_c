@@ -1,0 +1,131 @@
+import { Tabs } from "nextra/components";
+
+# Count of Positive, Negative, and Zero Numbers
+
+This program counts the number of positive, negative, and zero numbers from a user-provided set of integers. It prompts the user to enter a specified number of integers and then classifies each integer into one of three categories: positive, negative, or zero. The program finally displays the counts of each category.
+
+### Code Breakdown
+
+## Algorithm
+
+1. **Start**
+2. **Input Limit**: Read the value of `n` (number of integers) from the user.
+3. **Initialize Counters**:
+   - Set `pc`, `nc`, and `zc` to 0 for counting positives, negatives, and zeroes, respectively.
+4. **Read Integers**:
+   - Loop `n` times to read integers from the user.
+   - For each integer `x`:
+     - If `x` is positive, increment `pc`.
+     - If `x` is negative, increment `nc`.
+     - If `x` is zero, increment `zc`.
+5. **Display Results**:
+   - Print the counts of positive, negative, and zero numbers.
+6. **End**
+
+
+## Code Explanation
+
+<Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int i, n, x, pc, nc, zc;
+    clrscr(); // Clear the screen (specific to some compilers, not standard C).
+
+    printf("Enter the limit : ");
+    scanf("%d", &n); // Take input for the number of integers.
+
+    printf("\nEnter %d numbers :\n", n);
+
+    // Initialize counters
+    for(pc = 0, nc = 0, zc = 0, i = 0; i < n; i++)
+    {
+        scanf("%d", &x); // Read an integer from the user.
+        
+        if (x > 0) 
+            pc++; // Increment positive count if x is positive.
+        else if (x < 0) 
+            nc++; // Increment negative count if x is negative.
+        else 
+            zc++; // Increment zero count if x is zero.
+    }
+
+    printf("\nNumber of positive = %d", pc); // Print the count of positive numbers.
+    printf("\nNumber of negative = %d", nc); // Print the count of negative numbers.
+    printf("\nNumber of zeroes = %d", zc);   // Print the count of zeroes.
+
+    getch(); // Wait for a key press before exiting (specific to some compilers).
+}
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="plain" copy showLineNumbers
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int i, n, x, pc, nc, zc;
+    clrscr();
+    printf("Enter the limit : ");
+    scanf("%d", &n);
+    printf("\nEnter %d numbers :\n", n);
+    for(pc = 0, nc = 0, zc = 0, i = 0; i < n; i++)
+    {
+        scanf("%d", &x);
+        if (x > 0) pc++;
+        else if (x < 0) nc++;
+        else zc++;
+    }
+    printf("\nNumber of positive = %d", pc);
+    printf("\nNumber of negative = %d", nc);
+    printf("\nNumber of zeroes = %d", zc);
+    getch();
+}
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+                                    Start
+                                      |
+                                      V
+                                Input limit n
+                                      |
+                                      V
+                          Initialize pc, nc, zc to 0
+                                      |
+                                      V
+                               For i = 0 to n-1
+                                      |
+                                      V
+                                Read integer x
+                                      |
+                                      V
+                                  Is x > 0?     
+                                 /         \     
+                                /           \    
+                              Yes           No    
+                             /                \    
+                            /                  \   
+                           V                    V   
+                   Increment pc              Is x < 0?  
+                           |                 /       \    
+                           |               Yes       No  
+                           |               /           \  
+                           |              V             V  
+                           |       Increment nc    Increment zc  
+                           V              |             |    
+                           |              V             V    
+                           |             End           End    
+                           |                   
+                           V                   
+                          End
+
+```

@@ -1,8 +1,8 @@
 {
   "index": "Introduction",
   "foundation": "Foundation",
-  "fold1": "Solution 1 >> 5",
-  "fold2": "Solution 6 >> 20",
+  "fold1": "Solution 1 to 5",
+  "fold2": "Solution 6 to 20",
   "about": {
     "title": "About",
     "type": "page"
@@ -10,7 +10,7 @@
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://wa.me/9633316673",
     "newWindow": true
   }
 }
