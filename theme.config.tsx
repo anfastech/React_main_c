@@ -17,6 +17,14 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Cyeranex Tech",
   },
+  banner: {
+    key: 'Updation-Release', // Change this key to reflect the current banner text or version
+    text: (
+      <a href="https://cyera-code.vercel.app/fold1/sol2#code-explanation" >
+        🎉 Ouput features are updated to 1 to 8. See more →
+      </a>
+    )
+  },
   darkMode: true,
   sidebar: {
     defaultMenuCollapseLevel: 1,
