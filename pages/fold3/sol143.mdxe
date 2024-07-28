@@ -1,0 +1,147 @@
+import { Tabs } from "nextra/components";
+
+# Search for an Element in an Array
+
+This program searches for a specified number in an array of integers. It reads the number of elements, the elements themselves, and the number to be searched from the user. The program then checks if the number is present in the array and prints the index where it is found or a message indicating that it is not found.
+
+
+### Code Breakdown
+
+## Algorithm
+
+1. **Start**
+2. **Input:** Number of elements `n` and elements of the array.
+3. **Input:** Number to be searched `x`.
+4. **Initialize:** Set `found` to 0 (indicating the number has not been found yet).
+5. **Loop:** Iterate over each element in the array from index 0 to `n-1`.
+   - If the current element matches `x`, set `found` to 1 and break the loop.
+6. **Check:** 
+   - If `found` is 1, print the index where `x` was found.
+   - Otherwise, print a message indicating `x` was not found.
+7. **End**
+
+
+## Code Explanation
+
+<Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a[10], i, n, x, found;
+    clrscr();  // Clear the screen
+    
+    // Prompt the user to enter the number of elements
+    printf("Enter the limit : ");
+    scanf("%d", &n);
+    
+    // Prompt the user to enter the elements of the array
+    printf("\nEnter %d elements for the array :\n", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);  // Read each element
+    }
+    
+    // Prompt the user to enter the number to search for
+    printf("\nEnter a number : ");
+    scanf("%d", &x);
+    
+    // Initialize the found flag to 0 (indicating not found)
+    for(found = 0, i = 0; i < n; i++)
+    {
+        if(a[i] == x)  // Check if the current element matches x
+        {
+            found = 1;  // Set found flag to 1
+            break;  // Exit the loop as we found the element
+        }
+    }
+    
+    // Print the result based on whether the number was found or not
+    if(found) 
+        printf("\n%d is found at location %d in the array", x, i + 1);
+    else 
+        printf("\n%d is not found in the array", x);
+    
+    getch();  // Wait for a key press before exiting
+}
+
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="plain" copy showLineNumbers
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a[10], i, n, x, found;
+    clrscr();
+    printf("Enter the limit : ");
+    scanf("%d", &n);
+    printf("\nEnter %d elements for the array :\n", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("\nEnter a number : ");
+    scanf("%d", &x);
+    for(found = 0, i = 0; i < n; i++)
+    {
+        if(a[i] == x)
+        {
+            found = 1;
+            break;
+        }
+    }
+    if(found) 
+        printf("\n%d is found at location %d in the array", x, i + 1);
+    else 
+        printf("\n%d is not found in the array", x);
+    getch();
+}
+
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+                            Start
+                              |
+                              V
+                Input the number of elements (n)
+                              |
+                              V
+         Input the elements of the array (a[0] to a[n-1])
+                              |
+                              V
+                Input the number to search for (x)
+                              |
+                              V
+                 Initialize found = 0, i = 0
+                              |
+                              V
+            +-----------------+--------------------+
+            |                                      |
+            |               Is i < n?              |
+            |                                      |
+            +----+-----------------------+---------+
+                  |                         |
+                  | Yes                     | No
+                  |                         |
+                  V                         V
+        +---------+----------+         Print "x is not
+        |   Is a[i] == x?    |       found in the array"
+        +---------+----------+
+                  | Yes
+                  |
+                  V
+  Print "x is found at location i + 1"
+                  |
+                 End
+
+```
