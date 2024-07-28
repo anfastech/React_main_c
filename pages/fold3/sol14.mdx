@@ -1,31 +1,138 @@
-import { Callout, Cards, Card } from 'nextra/components';
-import { WarningIcon, CardsIcon, OneIcon } from '../../icons';
+import { Tabs } from "nextra/components";
 
-# Sorry Previous Page was wrong
+# Appending Two Arrays in C
 
-<Callout emoji="🚧">
-  This page is currently under construction. Please check back later !
-</Callout>
+This program demonstrates how to append the elements of one array to another in C. The user is prompted to enter the size and elements of two arrays. The program then combines the second array with the first array and displays the resulting array.
 
-#### Updating Content Dynamically
-At this moment, we're working on enhancing this page to offer you more valuable content and resources. Here’s what you can expect:
 
-<Cards>
-  <Card 
-    icon={<CardsIcon />} 
-    title="Foundation Page" 
-    href="/foundation" 
-  />
-  <Card 
-    icon={<WarningIcon />} 
-    title="About Us" 
-    href="/about" 
-  />
-  <Card 
-    icon={<OneIcon />} 
-    title="Connect on Instagram" 
-    href="https://www.instagram.com/by.anfas" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  />
-</Cards>
+### Code Breakdown
+
+## Algorithm
+
+1. **Step Start**
+2. **Initialize Arrays**:
+   - Define arrays `a` and `b` to hold the elements of the first and second arrays respectively.
+3. **Input First Array**:
+   - Prompt the user to enter the size of the first array (`m`).
+   - Read `m` elements into array `a`.
+4. **Input Second Array**:
+   - Prompt the user to enter the size of the second array (`n`).
+   - Read `n` elements into array `b`.
+5. **Append Second Array to First Array**:
+   - Loop through each element in array `b` and add it to the end of array `a`.
+6. **Display Resulting Array**:
+   - Print the combined array `a`.
+7. **Step End**
+
+
+## Code Explanation
+
+<Tabs items={['In Depth', 'Clear code']} defaultIndex="0">
+  <Tabs.Tab>
+```c filename="Detailed" copy showLineNumbers
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int a[20], b[10], i, j, m, n;
+    clrscr(); // Clear the screen
+
+    // Prompt the user to enter the size of the first array
+    printf("Enter the size of first array: ");
+    scanf("%d", &m);
+
+    // Prompt the user to enter elements into the first array
+    printf("\nEnter %d elements into first array:\n", m);
+    for (i = 0; i < m; i++)
+        scanf("%d", &a[i]);
+
+    // Prompt the user to enter the size of the second array
+    printf("\nEnter the size of second array: ");
+    scanf("%d", &n);
+
+    // Prompt the user to enter elements into the second array
+    printf("\nEnter %d elements into second array:\n", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &b[i]);
+
+    // Append the second array to the first array
+    for (i = m, j = 0; j < n; i++, j++)
+        a[i] = b[j];
+
+    // Display the resulting array after appending
+    printf("\nFirst array after appending second array:\n");
+    for (i = 0; i < m + n; i++)
+        printf("\n%d", a[i]);
+
+    getch(); // Wait for a key press
+}
+
+```
+</Tabs.Tab>
+<Tabs.Tab>
+``` c filename="plain" copy showLineNumbers
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int a[20], b[10], i, j, m, n;
+    clrscr();
+    printf("Enter the size of first array: ");
+    scanf("%d", &m);
+    printf("\nEnter %d elements into first array:\n", m);
+    for (i = 0; i < m; i++)
+        scanf("%d", &a[i]);
+    printf("\nEnter the size of second array: ");
+    scanf("%d", &n);
+    printf("\nEnter %d elements into second array:\n", n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &b[i]);
+    for (i = m, j = 0; j < n; i++, j++)
+        a[i] = b[j];
+    printf("\nFirst array after appending second array:\n");
+    for (i = 0; i < m + n; i++)
+        printf("\n%d", a[i]);
+
+    getch();
+}
+
+```
+</Tabs.Tab>
+</Tabs>
+
+### Example Flowchart
+
+```plaintext
+
+                                 Start
+                                   |
+                                   V
+         Prompt user for size of first array `m` -----> Input `m`
+                                   |
+                                   V
+             Prompt user for `m` elements of first array `a`
+                                   |
+                                   V
+                    Input elements into array `a`
+                                   |
+                                   V
+        Prompt user for size of second array `n` -----> Input `n`
+                                   |
+                                   V
+            Prompt user for `n` elements of second array `b`
+                                   |
+                                   V
+                     Input elements into array `b`
+                                   |
+                                   V
+                For each element in `b`, append to `a`
+                                   |
+                                   V
+                Display elements of combined array `a`
+                                   |
+                                   V
+                                  End
+
+```
