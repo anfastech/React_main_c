@@ -32,8 +32,8 @@ const config: DocsThemeConfig = {
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Cyera App Documentation" />
-      <meta name="og:title" content="Cyera App Documentation" />
+      <meta name="description" content="CyeraCode App Documentation" />
+      <meta name="og:title" content="CyeraCode App Documentation" />
       <style>
         {`
           .hinfo {
