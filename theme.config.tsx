@@ -6,7 +6,7 @@ const config: DocsThemeConfig = {
   logo: (
     <>
       <span style={{ marginLeft: ".4em", fontWeight: 900, fontSize: "1.5rem" }}>
-        Cyrea Code
+        CyreaCode
       </span>
     </>
   ),
